@@ -36,7 +36,7 @@ app.post('/login', (req, res) => {
     })
   }
   const token = jwt.sign({userId: user.id, username: user.name}, secretKey)
-  res.json({token})
+  res.status(201).json({token})
 });
 
 // Product route (Students should implement this)
